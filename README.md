@@ -2,7 +2,7 @@
 ## INTRODUCTION:
 - Code supplement for the paper "Fresh-Food Community Group-Buying Delivery Problem for Heterogeneous Customer Demands".
 - If you need help using the code, please send an email to zhaokaiqibuaa@buaa.edu.cn
-- The code and data sets are also available from xxxxxxxxx
+
 
 ## DATASETS:
 - The instance data are provided in the compressed file "data.rar". 
