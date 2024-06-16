@@ -1,0 +1,87 @@
+/*********************************************
+ * OPL 12.8.0.0 Data
+ * Author: Master
+ * Creation Date: 2024年1月10日 at 下午4:56:14
+ *********************************************/
+ 
+ /****** ������ֱ��д��  *******/
+ M=9999;
+ M_Delay=99999;
+ 
+ /****** �������ݴ�excel��ȡ  *******/
+ /*prepare{
+  writeln("***********************not read yet***********************");
+ }*/
+ //writeln("***********************not read yet***********************");
+ SheetConnection sheet("data/updated_RC101+r1+p2.xlsx"); 
+ Nb_Cus from SheetRead(sheet,"penalty!A2:A2");
+// Nb_Cus from SheetRead(sheet,"penalty!G1:G1");
+ Nb_Veh from SheetRead(sheet,"penalty!B2:B2"); 
+// Nb_Veh from SheetRead(sheet,"penalty!G2:G2"); 
+ Nb_CusTyp from SheetRead(sheet,"penalty!C2:C2");
+ //Nb_Weight from SheetRead(sheet,"parameter!B4:B4"); 
+ //Bound from SheetRead(sheet,"parameter!D3:F3");  
+ //P_g from SheetRead(sheet,"parameter!D4:E4"); 
+ Q from SheetRead(sheet,"penalty!D2:D2"); 
+// Q from SheetRead(sheet,"penalty!G4:G4"); 
+ Start_cap from SheetRead(sheet,"penalty!E2:E2");
+ Start_time from SheetRead(sheet,"penalty!F2:F2"); 
+ Max_time from SheetRead(sheet,"penalty!G2:G2"); 
+ //Sens_dis from SheetRead(sheet,"parameter!B8:B8");  
+ Nb_Pro from SheetRead(sheet,"penalty!H2:H2");
+ //a1 from SheetRead(sheet,"parameter!B9:B9"); 
+ //a2 from SheetRead(sheet,"parameter!B10:B10"); 
+ //a3 from SheetRead(sheet,"parameter!B11:B11"); 
+ 
+ //int Rou[N_Veh]=...; //ÿ����װ����Ʒ�������������
+ //float Travel_dis[N][N] = ...;	//����ľ����ڽӾ���
+ //float Travel_time[N][N] = ...;	//�����ʱ���ڽӾ���
+ //float Demand[N][N_CT][N_Pro] = ...;	//ÿ���ڵ������
+ //float Service_time[N]=...;	//ÿ���ڵ��ϵķ���ʱ��
+ //float ET[N]= ...;	//���нڵ���������ʼʱ��
+ //float LT[N]= ...;	//���нڵ���������ʼʱ��
+ //float ET_Cus[N][N_CT]=...; //���нڵ㲻ͬ�ͻ�������ȡ��ʱ��
+ //float LT_Cus[N][N_CT]=...; //���нڵ㲻ͬ�ͻ�������ȡ��ʱ��
+ //float Alpha[1..2][N_Pro]=...; //���ʶ��½������ж�����ϵ����1��ʾ��س���2��ʾ�ų�
+ //float Beta[1..2][N_Pro]=...;
+ 
+ //Demand from SheetRead(sheet,"node!B7:B58"); 
+// TwoDementionDemand from SheetRead(sheet,"node!H12:K63"); 
+ TwoDementionDemand from SheetRead(sheet,"node!J2:K28"); 
+// TwoDementionX from SheetRead(sheet,"test!D11:CF37"); 
+// Service_time from SheetRead(sheet,"node!C7:C58");
+ Service_time from SheetRead(sheet,"node!D2:D28");
+// ET from SheetRead(sheet,"node!D7:D58");
+// LT from SheetRead(sheet,"node!E7:E58");
+ ET from SheetRead(sheet,"node!F2:F28");
+ LT from SheetRead(sheet,"node!G2:G28");
+// Rou from SheetRead(sheet,"penalty!F13:U13");
+ Rou from SheetRead(sheet,"penalty!L2:L16");
+// ET_Cus from SheetRead(sheet,"node!M12:N63"); //���нڵ㲻ͬ�ͻ�������ȡ��ʱ��
+// LT_Cus from SheetRead(sheet,"node!O12:P63"); //���нڵ㲻ͬ�ͻ�������ȡ��ʱ��
+ ET_Cus from SheetRead(sheet,"node!L2:L28"); //���нڵ㲻ͬ�ͻ�������ȡ��ʱ��
+ LT_Cus from SheetRead(sheet,"node!M2:M28"); //���нڵ㲻ͬ�ͻ�������ȡ��ʱ��
+ Alpha from SheetRead(sheet,"penalty!I2:I3"); //���ʶ��½������ж�����ϵ����1��ʾ��س���2��ʾ�ų�
+ Beta from SheetRead(sheet,"penalty!J2:J3");
+ Value from SheetRead(sheet,"penalty!K2:K3");
+// Omega from SheetRead(sheet,"penalty!E1:E1");
+// a from SheetRead(sheet,"penalty!E2:E2");
+ 
+// Travel_dis from SheetRead(sheet,"distance!B23:BA74"); 
+// Travel_time from SheetRead(sheet,"distance!B23:BA74"); 
+ Travel_dis from SheetRead(sheet,"distance!B2:AB28"); 
+ Travel_time from SheetRead(sheet,"distance!B2:AB28"); 
+ /*prepare{
+  writeln("***********************read***********************");
+ }*/
+
+SheetConnection sheetData("data/r1p2_result.xlsx");
+Cost to SheetWrite(sheetData,"RC!B2:B2");
+//T_i_k to SheetWrite(sheetData,"Product!A3:F18");
+//V_i_k to SheetWrite(sheetData,"Product!A19:F35");
+//X_ij_k_g to SheetWrite(sheetData,"Product!A1:XFD1048576");
+//Outputs to SheetWrite(sheetData,"Product!A36:E3503");
+//shapeX.shape to SheetWrite(sheetData,"Product!A2:A2");
+//shapeT.shape1 to SheetWrite(sheetData,"Product!A3:A3");
+//shapeV.shape2 to SheetWrite(sheetData,"Product!A4:A4");
+//Cost to SheetWrite(sheetData,"Product!A1:A1");
